@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Spam Filter</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SMS Spam Filter</h1>
+        <form action="/predict" method="POST">
+            <label for="sms">Enter your SMS:</label>
+            <textarea id="sms" name="sms" rows="4" required></textarea>
+            <button type="submit">Check</button>
+        </form>
+        <a href="/bulk">Bulk Upload</a>
+    </div>
+</body>
+</html>

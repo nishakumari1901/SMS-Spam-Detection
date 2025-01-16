@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Upload</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bulk SMS Analysis</h1>
+        <form action="/bulk" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload CSV File:</label>
+            <input type="file" id="file" name="file" accept=".csv" required>
+            <button type="submit">Analyze</button>
+        </form>
+        {% if table %}
+        <div>
+            <h2>Results</h2>
+            {{ table | safe }}
+        </div>
+        {% endif %}
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
